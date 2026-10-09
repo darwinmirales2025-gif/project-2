@@ -14,3 +14,8 @@ This repository contains Java programming exercises and examples.
 
 ## Purpose
 The purpose of this repository is to practice Java programming concepts and improve coding skills.
+## Project Goals
+
+- Practice Java programming concepts.
+- Organize programming exercises.
+- Improve understanding of object-oriented programming.
