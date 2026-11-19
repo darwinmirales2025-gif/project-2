@@ -1,0 +1,419 @@
+/* css/home.css */
+
+.hero {
+  height: min(900px, 100svh);
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: #0878a4 url("../assets/images/bg.jpg") center 54% / cover no-repeat;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 39, 63, 0.4) 0%,
+      rgba(0, 57, 81, 0.18) 47%,
+      rgba(0, 47, 74, 0.04) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 44, 58, 0.32), transparent 35%);
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 66, 105, 0.15), transparent 25%);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  margin-left: 5.8%;
+  padding-top: 70px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  opacity: 0.88;
+  display: none;
+}
+
+.hero h1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  letter-spacing: -5px;
+  line-height: 0.99;
+  font-size: clamp(64px, 7vw, 116px);
+  margin: 0 0 24px;
+  text-transform: lowercase;
+}
+
+.hero-subtitle {
+  font-size: clamp(17px, 1.5vw, 23px);
+  line-height: 1.45;
+  margin: 0 0 28px;
+  letter-spacing: 0.1px;
+}
+
+.hero-line {
+  position: absolute;
+  width: 2px;
+  background: #fff;
+  opacity: 0.8;
+}
+
+.hero-line-left {
+  height: 30%;
+  left: 3%;
+  top: 19%;
+}
+
+.hero-line-right {
+  height: 32%;
+  right: 3%;
+  bottom: 19%;
+}
+
+.scroll-cue {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.scroll-cue b {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.hero-tag {
+  position: absolute;
+  right: 4.4%;
+  bottom: 45px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.intro-section {
+  background: #fff;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+}
+
+.intro-grid h2,
+.section h2,
+.cta-section h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 4.5vw, 68px);
+  letter-spacing: -2.5px;
+  line-height: 1.08;
+  margin: 0;
+  font-weight: 800;
+}
+
+.intro-grid h2 em,
+.section h2 em,
+.cta-section h2 em,
+.page-heading h1 em {
+  font-style: normal;
+  color: var(--ocean);
+}
+
+.intro-grid p {
+  font-size: 17px;
+  color: #5d7481;
+  max-width: 570px;
+  margin: 0 0 24px;
+}
+
+.steps-section {
+  background: #e9f8f7;
+}
+
+.section-inner {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.steps-section h2 {
+  margin-bottom: 50px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.steps-grid article {
+  position: relative;
+  border-top: 1px solid #b4d9d9;
+  padding: 28px 8px 0 0;
+}
+
+.steps-grid article > span {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  background: #e9f8f7;
+  color: var(--ocean);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 0 8px;
+}
+
+.step-icon {
+  width: 53px;
+  height: 53px;
+  border-radius: 17px;
+  background: white;
+  color: var(--ocean);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  margin-bottom: 23px;
+  box-shadow: 0 7px 18px rgba(18, 48, 71, 0.06);
+}
+
+.steps-grid h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  margin: 0 0 9px;
+}
+
+.steps-grid p {
+  font-size: 13px;
+  color: #617984;
+  margin: 0;
+  max-width: 220px;
+}
+
+.cta-section {
+  margin: 70px 7.2%;
+  padding: 70px 7%;
+  border-radius: 26px;
+  min-height: 380px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section h2 {
+  font-size: clamp(42px, 5vw, 70px);
+  margin-bottom: 25px;
+}
+
+.cta-section .section-kicker {
+  color: #77551b;
+}
+
+.cta-note {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  align-self: flex-end;
+  position: relative;
+}
+
+.cta-note:before {
+  content: "✳";
+  font-size: 130px;
+  line-height: 1;
+  display: block;
+  color: rgba(18, 48, 71, 0.08);
+  position: absolute;
+  right: -50px;
+  bottom: 10px;
+}
+
+.site-footer {
+  background: var(--deep);
+  color: white;
+  padding: 55px 7.2% 22px;
+}
+
+.footer-brand {
+  margin-bottom: 18px;
+}
+
+.footer-brand .brand-mark {
+  font-size: 32px;
+}
+
+.footer-brand .brand-name {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.site-footer > p {
+  color: #b7cbd4;
+  font-size: 13px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+
+.footer-columns div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #b7cbd4;
+  font-size: 12px;
+}
+
+.footer-columns b {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  font-size: 11px;
+  color: #a5bdc8;
+}
+
+.footer-bottom a {
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 680px;
+    height: 92svh;
+    background-position: 58% center;
+  }
+
+  .hero-copy {
+    margin-left: 7%;
+    padding-top: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(53px, 12vw, 82px);
+    letter-spacing: -3px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  .button-outline {
+    min-width: 0;
+    padding: 13px 19px;
+    font-size: 10px;
+  }
+
+  .hero-line-right {
+    right: 5%;
+    height: 23%;
+    bottom: 19%;
+  }
+
+  .hero-line-left {
+    left: 4%;
+    height: 22%;
+    top: 22%;
+  }
+
+  .hero-tag {
+    display: none;
+  }
+
+  .scroll-cue {
+    bottom: 23px;
+    font-size: 9px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .intro-grid h2,
+  .section h2,
+  .cta-section h2 {
+    font-size: 43px;
+  }
+
+  .intro-grid p {
+    font-size: 15px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 22px;
+  }
+
+  .steps-section h2 {
+    margin-bottom: 35px;
+  }
+
+  .cta-section {
+    margin: 30px 5%;
+    padding: 42px 7%;
+    min-height: 0;
+  }
+
+  .cta-note {
+    display: none;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .site-footer {
+    padding: 40px 6% 20px;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+}

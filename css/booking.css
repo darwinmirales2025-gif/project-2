@@ -1,0 +1,342 @@
+/* css/booking.css */
+
+.form-layout {
+  display: block;
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.form-card,
+.aside-card,
+.confirmation-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 27px;
+  box-shadow: 0 8px 30px rgba(18, 48, 71, 0.04);
+}
+
+.form-card-title {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.form-card-title > span {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--aqua);
+  color: var(--ocean);
+  font-weight: 800;
+}
+
+.form-card-title h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  margin: 0 0 3px;
+}
+
+.form-card-title p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.form-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.form-card input:not([type="checkbox"]):not([type="file"]),
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  border: 1px solid #d9e5e9;
+  background: #fbfdfe;
+  border-radius: 10px;
+  padding: 12px 13px;
+  outline: none;
+  color: var(--deep);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.cost-breakdown {
+  background: #f5fafb;
+  border-radius: 13px;
+  padding: 16px;
+}
+
+.cost-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  margin: 7px 0;
+}
+
+.cost-breakdown span {
+  color: var(--muted);
+}
+
+.cost-breakdown strong {
+  font-weight: 700;
+  text-align: right;
+}
+
+.field-note {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.id-notice {
+  background: #eaf8f7;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.id-notice p {
+  margin: 5px 0 0;
+  color: #577580;
+}
+
+.upload-zone {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px dashed #8cbfc8;
+  background: #f7fcfc;
+  border-radius: 14px;
+  padding: 22px !important;
+  text-align: center;
+  cursor: pointer;
+  margin: 15px 0 !important;
+}
+
+.upload-icon {
+  font-size: 25px;
+  color: var(--ocean);
+}
+
+.upload-zone small {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  background: #f3f8f9;
+  border-radius: 9px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.selected-file button {
+  border: 0;
+  background: none;
+  color: #b34131;
+  font-weight: 700;
+}
+
+.check-label {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 !important;
+  width: 100%;
+  min-height: 48px;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5;
+  margin: 18px 0 0 !important;
+}
+
+.check-label span {
+  flex: 0 1 50%;
+}
+
+.check-label input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+
+.aside-card {
+  position: sticky;
+  top: 20px;
+}
+
+.aside-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.aside-card > p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.aside-card ul {
+  padding-left: 18px;
+  color: #57717e;
+  font-size: 12px;
+  line-height: 2.2;
+  margin: 20px 0;
+}
+
+.confirmation-card {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
+  padding: 38px;
+}
+
+.confirmation-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #e0f7ed;
+  color: #16805e;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+.confirmation-card h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.confirmation-card > p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.reference-box {
+  margin: 25px auto;
+  padding: 17px;
+  background: #f1f8f9;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.reference-box > span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.reference-box > strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+
+.confirmation-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+  text-align: left;
+  margin: 22px 0;
+}
+
+.confirmation-summary > div {
+  padding: 12px 0;
+  border-bottom: 1px solid #e9f0f2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.confirmation-summary span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.confirmation-summary strong {
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aside-card {
+    position: static;
+  }
+
+  .form-card,
+  .aside-card,
+  .confirmation-card {
+    padding: 20px;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-card h2 {
+    font-size: 27px;
+  }
+
+  .confirmation-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .confirmation-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-card button[type="submit"] {
+  display: block;
+  margin: 16px auto 0;
+  font-weight: 700;
+}
+
+.form-card .button-full {
+  width: 100%;
+}

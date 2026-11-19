@@ -1,0 +1,127 @@
+/* css/admin-login.css */
+
+.admin-login-body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 15% 15%, #c7f2ee 0, transparent 35%),
+    radial-gradient(circle at 90% 90%, #d6f0f5 0, transparent 35%), #f4fafc;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+}
+
+.login-wrap {
+  width: min(100%, 440px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-brand {
+  color: var(--deep);
+  margin-bottom: 25px;
+}
+
+.login-brand .brand-mark {
+  font-size: 34px;
+}
+
+.login-brand .brand-name {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+}
+
+.login-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 34px;
+  width: 100%;
+  box-shadow: 0 25px 80px rgba(18, 48, 71, 0.08);
+}
+
+.login-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #e4f8f6;
+  color: var(--ocean);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-card h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin: 0 0 9px;
+}
+
+.login-card > p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 25px;
+}
+
+.login-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 60px !important;
+}
+
+.password-field button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: none;
+  color: var(--ocean);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.login-error {
+  font-size: 12px;
+  color: #b34131;
+  min-height: 18px;
+  margin: 0 0 8px;
+}
+
+.login-disclaimer {
+  margin: 18px 0 0 !important;
+  font-size: 10px !important;
+  line-height: 1.6;
+}
+
+.login-back {
+  font-size: 12px;
+  color: var(--ocean);
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 25px;
+  }
+}
+.login-card .button {
+  display: flex;
+  width: 240px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
