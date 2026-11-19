@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets page metadata, description, title, and catalog styles. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Browse action cameras and adventure-ready equipment available to rent from RYS Camera Rental." />
+    <title>Equipment Catalog | RYS Camera Rental</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
+</head>
+
+<body>
+    <!-- Provides site branding and navigation to the catalog and related pages. -->
+    <header class="site-header catalog-header">
+        <a class="brand" href="index.html" aria-label="RYS Camera Rental home">
+            <span class="brand-mark">
+                RYS
+                <span class="wave">⌁</span>
+            </span>
+            <span class="brand-name">CAMERA RENTAL</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <nav class="main-nav">
+            <a href="index.html#home">home</a>
+            <a href="equipment.html" aria-current="page">equipment</a>
+            <a href="track-booking.html">track booking</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#contact">contact</a>
+        </nav>
+    </header>
+
+    <!-- Contains the catalog introduction, search tools, and equipment results. -->
+    <main class="catalog-page">
+        <!-- Introduces the rental collection and links to the catalog section. -->
+        <section class="catalog-hero">
+            <div class="section-kicker">FIND YOUR ADVENTURE GEAR</div>
+            <h1>
+                Gear up for<br />
+                <em>the good stuff.</em>
+            </h1>
+            <p>
+                Explore action cameras and adventure-ready accessories for your next island trip,
+                freedive, hike, or weekend escape.
+            </p>
+            <a class="button button-primary" href="#catalog">
+                BROWSE ALL EQUIPMENT
+                <span>↓</span>
+            </a>
+        </section>
+
+        <!-- Provides equipment search, filters, sorting, and result containers. -->
+        <section class="section equipment-section" id="catalog">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">THE RENTAL COLLECTION</div>
+                    <h2>Choose your gear.</h2>
+                </div>
+                <p>
+                    Compare equipment, check availability, and select what you need for your next adventure.
+                </p>
+            </div>
+
+            <div class="catalog-tools">
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input id="searchEquipment" type="search" placeholder="Search cameras and gear..." />
+                </label>
+
+                <select id="categoryFilter" aria-label="Filter category">
+                    <option value="all">All categories</option>
+                    <option>Action Cameras</option>
+                    <option>360 Cameras</option>
+                    <option>Camera Accessories</option>
+                    <option>Diving Accessories</option>
+                </select>
+
+                <select id="availabilityFilter" aria-label="Filter availability">
+                    <option value="all">Any availability</option>
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+
+                <select id="sortEquipment" aria-label="Sort equipment">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: low to high</option>
+                    <option value="price-high">Price: high to low</option>
+                    <option value="name">Name A–Z</option>
+                </select>
+
+                <button id="clearFilters" class="button button-light" type="button">Clear</button>
+            </div>
+
+            <div id="equipmentGrid" class="equipment-grid" aria-live="polite"></div>
+
+            <div id="catalogEmpty" class="empty-state hidden">
+                <span>🌊</span>
+                <h3>No gear found</h3>
+                <p>Try changing your search or filters.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Provides contact details, operating hours, social link, and footer navigation. -->
+    <footer id="contact" class="site-footer">
+        <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark">
+                RYS
+                <span class="wave">⌁</span>
+            </span>
+            <span class="brand-name">CAMERA RENTAL</span>
+        </a>
+
+        <p>Capture every adventure. Keep every memory.</p>
+
+        <div class="footer-columns">
+            <div>
+                <b>GET IN TOUCH</b>
+                <span>ryscamerarental@gmail.com</span>
+                <span>+63 900 000 0000</span>
+            </div>
+
+            <div>
+                <b>OPERATING HOURS</b>
+                <span>Monday – Sunday</span>
+                <span>7:00 AM – 10:00 PM</span>
+            </div>
+
+            <div>
+                <b>FOLLOW THE ADVENTURE</b>
+                <a href="https://www.facebook.com/profile.php?id=61564699723501" target="_blank"
+                    rel="noopener noreferrer">Facebook</a>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> RYS Camera Rental</span>
+                <a href="#home">Back to top ↑</a>
+            </div>
+    </footer>
+
+    <!-- Displays temporary user feedback messages. -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Loads shared utilities before equipment catalog behavior. -->
+    <script src="js/main.js"></script>
+    <script src="js/equipment.js"></script>
+</body>
+
+</html>
