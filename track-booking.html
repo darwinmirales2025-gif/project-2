@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets page metadata, title, and booking tracking styles. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Track My Booking | RYS Camera Rental</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/track.css" />
+</head>
+
+<body>
+    <!-- Provides site branding and navigation back to the home page. -->
+    <header class="simple-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">
+                RYS
+                <span class="wave">⌁</span>
+            </span>
+            <span class="brand-name">CAMERA RENTAL</span>
+        </a>
+
+        <a class="text-link" href="index.html">← Home</a>
+    </header>
+
+    <!-- Contains the tracking instructions, lookup form, and booking result area. -->
+    <main class="page-shell track-page">
+        <div class="page-heading">
+            <div class="section-kicker">YOUR ADVENTURE, IN THE MAKING</div>
+            <h1>Track your <em>booking.</em></h1>
+            <p>
+                Enter the booking reference and the same email address you used when submitting your request.
+            </p>
+        </div>
+
+        <!-- Collects the reference and email used to identify a booking. -->
+        <form id="trackingForm" class="tracking-form">
+            <label>
+                Booking reference
+                <input name="reference" required placeholder="e.g. RYS-A1B2C3D4" autocapitalize="characters" />
+            </label>
+
+            <label>
+                Email address
+                <input name="email" type="email" required placeholder="you@example.com" />
+            </label>
+
+            <button class="button button-primary button-full" type="submit">
+                FIND MY BOOKING <span>⟶</span>
+            </button>
+
+            <p class="field-note">For privacy, both details must match the same booking.</p>
+        </form>
+
+        <!-- Displays matching booking details or a lookup error. -->
+        <div id="trackingResult" class="tracking-result" aria-live="polite"></div>
+    </main>
+
+    <!-- Displays the site footer and temporary status messages. -->
+    <footer class="mini-footer">RYS CAMERA RENTAL · CAPTURE EVERY ADVENTURE</footer>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <!-- Loads shared utilities before booking lookup behavior. -->
+    <script src="js/main.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+
+</html>
