@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets page metadata, title, and styles for the admin dashboard. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard | RYS Camera Rental</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body class="admin-body">
+    <!-- Wraps the dashboard sidebar and active page content. -->
+    <div id="adminApp" class="admin-app">
+        <!-- Provides dashboard navigation and the sign-out control. -->
+        <aside class="admin-sidebar">
+            <a class="brand admin-brand" href="admin.html" aria-label="Close sidebar">
+                <span class="brand-mark">
+                    RYS
+                    <span class="wave">⌁</span>
+                </span>
+                <span class="brand-name">CAMERA RENTAL</span>
+            </a>
+
+            <div class="admin-sidebar-label">WORKSPACE</div>
+
+            <nav id="adminNav">
+                <button class="active" data-view="dashboard">▦ <span>Dashboard</span></button>
+                <button data-view="equipment">▣ <span>Equipment Management</span></button>
+                <button data-view="availability">◷ <span>Availability Management</span></button>
+                <button data-view="bookings">▤ <span>Booking Management</span></button>
+                <button data-view="customers">♙ <span>Customer Records</span></button>
+                <button data-view="rentals">↔ <span>Rentals &amp; Returns</span></button>
+                <button data-view="conditions">✓ <span>Equipment Condition Records</span></button>
+            </nav>
+
+            <button id="adminSignOut" class="signout-button">↪ <span>Sign Out</span></button>
+        </aside>
+
+        <!-- Displays the dashboard header and current admin view. -->
+        <main class="admin-main">
+            <!-- Holds the responsive menu toggle and administrator identity. -->
+            <header class="admin-topbar">
+                <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="true">
+                    <span class="hamburger" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <div class="topbar-brand">
+                    <span class="topbar-eyebrow">RYS CAMERA RENTAL</span>
+                </div>
+
+                <div class="admin-user">
+                    <img class="admin-avatar" src="assets/images/admin.jpg" alt="Administrator profile picture" />
+                    <span>
+                        <b>Administrator</b>
+                        <small>Owner</small>
+                    </span>
+                </div>
+            </header>
+
+            <!-- Receives the admin view rendered by admin.js. -->
+            <div id="adminContent" class="admin-content"></div>
+        </main>
+    </div>
+
+    <!-- Dismisses the sidebar when the mobile navigation overlay is clicked. -->
+    <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- Provides the reusable dialog container for admin actions and forms. -->
+    <div id="adminModal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <button id="closeModal" class="modal-close" aria-label="Close dialog">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Displays temporary status and action messages. -->
+    <div id="toast" class="toast" role="status"></div>
+
+    <!-- Loads shared utilities before the admin dashboard behavior. -->
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
