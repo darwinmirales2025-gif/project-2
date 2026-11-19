@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets page metadata, title, and equipment detail styles. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Equipment Details | RYS Camera Rental</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/details.css" />
+</head>
+
+<body>
+    <!-- Provides branding and navigation back to the equipment catalog. -->
+    <header class="simple-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">
+                RYS
+                <span class="wave">⌁</span>
+            </span>
+            <span class="brand-name">CAMERA RENTAL</span>
+        </a>
+
+        <a class="text-link" href="index.html#equipment">← Back to equipment</a>
+    </header>
+
+    <!-- Holds the equipment details rendered from the selected equipment record. -->
+    <main class="page-shell">
+        <div id="equipmentDetails" class="details-layout"></div>
+    </main>
+
+    <!-- Displays the site footer and temporary status messages. -->
+    <footer class="mini-footer">RYS CAMERA RENTAL · CAPTURE EVERY ADVENTURE</footer>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <!-- Loads shared utilities before equipment detail rendering behavior. -->
+    <script src="js/main.js"></script>
+    <script src="js/equipment.js"></script>
+</body>
+
+</html>
