@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets page metadata, title, and styles for the admin login screen. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Administrator | RYS Camera Rental</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/admin-login.css" />
+</head>
+
+<body class="admin-login-body">
+    <!-- Contains the admin login card and navigation back to the public site. -->
+    <main class="login-wrap">
+        <!-- Links the RYS brand back to the public home page. -->
+        <a class="brand login-brand" href="index.html">
+            <span class="brand-mark">
+                RYS
+                <span class="wave">⌁</span>
+            </span>
+            <span class="brand-name">CAMERA RENTAL</span>
+        </a>
+
+        <!-- Presents the staff sign-in form and prototype disclaimer. -->
+        <div class="login-card">
+            <div class="login-icon">✦</div>
+            <div class="section-kicker">OWNER</div>
+            <h1>Administrator login</h1>
+            <p>Sign in to manage equipment, booking requests, and rental operations.</p>
+
+            <!-- Collects administrator credentials and displays login feedback. -->
+            <form id="adminLoginForm">
+                <label>
+                    Username or email
+                    <input name="username" type="text" autocomplete="username" required
+                        placeholder="Administrator email" />
+                </label>
+
+                <label>
+                    Password
+                    <div class="password-field">
+                        <input id="adminPassword" name="password" type="password" autocomplete="current-password"
+                            required placeholder="Enter password" />
+                        <button id="showPassword" type="button">Show</button>
+                    </div>
+                </label>
+
+                <p id="loginError" class="login-error" role="alert"></p>
+
+                <button class="button button-primary button-full" type="submit">
+                    SIGN IN ⟶
+                </button>
+            </form>
+
+            <p class="login-disclaimer">
+                Prototype only. This demo login is not suitable for real customer data or production use.
+            </p>
+        </div>
+
+        <!-- Provides a return link for visitors who do not need admin access. 
+        <a class="login-back" href="index.html">← Return to public website</a> -->
+    </main>
+
+    <!-- Loads shared application utilities and admin authentication behavior. -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
